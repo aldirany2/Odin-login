@@ -1,0 +1,13 @@
+@mixin odin-btn{
+    border-radius: 10px;
+    background: $ligt-blue;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: capitalize;
+    outline: none;
+    transition: all .3s;
+}
