@@ -1,4 +1,6 @@
-// @use "../abstracts/variables";
+@use "../abstracts/variables";
+// @use "abstracts/variables";
+
 body {
     margin: 0;
     padding: 0;
@@ -28,7 +30,7 @@ body {
 
             h1 {
                 position: relative;
-                color: $white;
+                // color: $create-btn;
 
                 &::before {
                     content: "";
