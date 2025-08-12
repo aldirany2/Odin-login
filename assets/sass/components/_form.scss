@@ -1,10 +1,53 @@
+// @use "../abstracts/variables";
+body {
+    margin: 0;
+    padding: 0;
+}
 
-.bg-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    h1{
-        font-family: norse;
+.main-wrapper {
+    width: 100%;
+
+    .bg-main {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url(/assets/img/bg-img.jpg);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 30%;
+
+        .logo-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 35px;
+            background-color: #0000008c;
+            width: 100%;
+
+            h1 {
+                position: relative;
+                color: $white;
+
+                &::before {
+                    content: "";
+                    background-image: url(/assets/img/odin-lined.png);
+                    display: inline-block;
+                    width: 120px;
+                    height: 120px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: absolute;
+                    left: -110px;
+                    top: -10px;
+                }
+            }
+        }
+    }
+
+    .bg-form-wrapper{
+        padding: 40px;
     }
 }
