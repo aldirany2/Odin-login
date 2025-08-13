@@ -13,14 +13,16 @@ body {
         justify-content: center;
         align-items: flex-start;
         background-image: url(/assets/img/bg-img.jpg);
-        height: 100vh;
+        height: 100%;
+        min-height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         padding-top: 30%;
 
-        @media(max-width: 991px){
-            height: 30vh;
+        @media(max-width: 991px) {
+            height: 40vh;
+            min-height: unset;
             padding-top: unset;
             align-items: center;
         }
@@ -63,7 +65,7 @@ body {
 
         .left-content,
         .left-footer {
-            padding: 50px;
+            padding: 20px 50px;
         }
 
         .form-wrapper {
@@ -79,7 +81,7 @@ body {
                 max-width: 80%;
                 padding: 20px 0;
 
-                @media(max-width: 768px){
+                @media(max-width: 768px) {
                     max-width: 100%;
                 }
 
@@ -96,12 +98,29 @@ body {
                     border: 1px solid #e1e1e1;
                     border-radius: 4px;
                     padding: 4px 12px;
+
+                    &:focus-visible {
+                        border:1px solid blue;
+                        outline: unset;
+                        box-shadow: 0 0 10px 0 #0000001a;
+                    }
+                }
+
+                input[type="password"] {
+                    &:invalid {
+                        border-color: red;
+                        // border-width: 3px;
+                    }
+
+                    &:valid{
+                        border-color: green;
+                    }
                 }
             }
         }
 
         .left-footer {
-            padding-top: 30px;
+            padding-top: 25px;
             padding-bottom: 0;
 
             button {
